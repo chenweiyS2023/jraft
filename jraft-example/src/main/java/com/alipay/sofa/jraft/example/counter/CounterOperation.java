@@ -31,9 +31,14 @@ public class CounterOperation implements Serializable {
     public static final byte  GET              = 0x01;
     /** Increment and get value */
     public static final byte  INCREMENT        = 0x02;
+    /** Write bytes */
+    public static final byte  WRITE_BYTES      = 0x03;
+    /** Read bytes */
+    public static final byte  READ_BYTES       = 0x04;
 
     private byte              op;
     private long              delta;
+    private byte[]            bytes;
 
     public static CounterOperation createGet() {
         return new CounterOperation(GET);
@@ -41,6 +46,14 @@ public class CounterOperation implements Serializable {
 
     public static CounterOperation createIncrement(final long delta) {
         return new CounterOperation(INCREMENT, delta);
+    }
+
+    public static CounterOperation createSetBytesValue(final byte[] bytes) {
+        return new CounterOperation(WRITE_BYTES, bytes);
+    }
+
+    public static CounterOperation createReadBytes() {
+        return new CounterOperation(READ_BYTES);
     }
 
     public CounterOperation(byte op) {
@@ -52,12 +65,21 @@ public class CounterOperation implements Serializable {
         this.delta = delta;
     }
 
+    public CounterOperation(byte op, byte[] bytes) {
+        this.op = op;
+        this.bytes = bytes;
+    }
+
     public byte getOp() {
         return op;
     }
 
     public long getDelta() {
         return delta;
+    }
+
+    public byte[] getBytes() {
+        return bytes;
     }
 
     public boolean isReadOp() {

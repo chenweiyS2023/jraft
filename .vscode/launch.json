@@ -1,0 +1,331 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "DefaultLogStorageBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.storage.Benchmark.DefaultLogStorageBenchmark",
+            "projectName": "java-log-storage-impl"
+        },
+        {
+            "type": "java",
+            "name": "JmhBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.storage.Benchmark.JmhBenchmark",
+            "projectName": "java-log-storage-impl"
+        },
+        {
+            "type": "java",
+            "name": "AppendEntriesBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rpc.AppendEntriesBenchmark",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "LogStorageBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.storage.impl.LogStorageBenchmark",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "AsciiCodecBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.util.AsciiCodecBenchmark",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "SignalHelperTest",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.util.SignalHelperTest",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "Utf8CodecBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.util.Utf8CodecBenchmark",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "SingleThreadExecutorBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.util.concurrent.SingleThreadExecutorBenchmark",
+            "projectName": "jraft-core"
+        },
+        {
+            "type": "java",
+            "name": "BenchmarkBootstrap",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.benchmark.BenchmarkBootstrap",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "Yaml",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.benchmark.Yaml",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "BenchmarkClient",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.benchmark.client.BenchmarkClient",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "BenchmarkServer",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.benchmark.server.BenchmarkServer",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "CounterClient",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.counter.CounterClient",
+            "projectName": "jraft-example",
+            "args": ["counter","127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083"]
+        },
+        {
+            "type": "java",
+            "name": "CounterServer",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.counter.CounterServer",
+            "projectName": "jraft-example",
+            "args": ["\\tmp\\server1", "counter", "127.0.0.1:8081", "127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083"]
+        },
+        {
+            "type": "java",
+            "name": "ElectionBootstrap",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.election.ElectionBootstrap",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "PriorityElectionBootstrap",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.priorityelection.PriorityElectionBootstrap",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "CompareAndPutExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.CompareAndPutExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "DeleteExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.DeleteExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "DeleteRangeExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.DeleteRangeExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "DistributedLockExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.DistributedLockExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "GetAndPutExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.GetAndPutExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "GetExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.GetExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "GetSequenceExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.GetSequenceExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "IteratorExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.IteratorExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "MergeExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.MergeExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "MultiGetExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.MultiGetExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "PutExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.PutExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "PutIfAbsentExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.PutIfAbsentExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "ReverseScanExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.ReverseScanExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "ScanExample",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.ScanExample",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "Server1",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.Server1",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "Server2",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.Server2",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "Server3",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.example.rheakv.Server3",
+            "projectName": "jraft-example"
+        },
+        {
+            "type": "java",
+            "name": "RawKVApproximateBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.raw.RawKVApproximateBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "RawKVGetBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.raw.RawKVGetBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "RawKVPutBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.raw.RawKVPutBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "SnapshotBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.raw.SnapshotBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "RheaKVGetBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.rhea.RheaKVGetBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "RheaKVPutBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.benchmark.rhea.RheaKVPutBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "RheaHeartbeatTest",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.pd.RheaHeartbeatTest",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "VarIntsBenchmark",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.util.VarIntsBenchmark",
+            "projectName": "jraft-rheakv-core"
+        },
+        {
+            "type": "java",
+            "name": "PdServer",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.PdServer",
+            "projectName": "jraft-rheakv-pd"
+        },
+        {
+            "type": "java",
+            "name": "PlacementDriverStartup",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.rhea.PlacementDriverStartup",
+            "projectName": "jraft-rheakv-pd"
+        },
+        {
+            "type": "java",
+            "name": "AtomicClientTest",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.test.atomic.client.AtomicClientTest",
+            "projectName": "jraft-test"
+        },
+        {
+            "type": "java",
+            "name": "AtomicServer",
+            "request": "launch",
+            "mainClass": "com.alipay.sofa.jraft.test.atomic.server.AtomicServer",
+            "projectName": "jraft-test"
+        }
+    ]
+}

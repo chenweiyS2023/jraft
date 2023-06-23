@@ -18,12 +18,15 @@ package com.alipay.sofa.jraft.example.counter;
 
 import static com.alipay.sofa.jraft.example.counter.CounterOperation.GET;
 import static com.alipay.sofa.jraft.example.counter.CounterOperation.INCREMENT;
+import static com.alipay.sofa.jraft.example.counter.CounterOperation.READ_BYTES;
+import static com.alipay.sofa.jraft.example.counter.CounterOperation.WRITE_BYTES;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicLongArray;
 
 import com.alipay.sofa.jraft.util.NamedThreadFactory;
 import com.alipay.sofa.jraft.util.ThreadPoolUtil;
@@ -65,6 +68,10 @@ public class CounterStateMachine extends StateMachineAdapter {
      * Counter value
      */
     private final AtomicLong          value      = new AtomicLong(0);
+    /** 
+     * Byte Array Value
+     */
+    private final Byte[]              byteValue  = new Byte[100];
     /**
      * Leader term
      */
@@ -79,6 +86,13 @@ public class CounterStateMachine extends StateMachineAdapter {
      */
     public long getValue() {
         return this.value.get();
+    }
+
+    /**
+     * Returns byte value.
+     */
+    public Byte[] getByteValue() {
+        return this.byteValue;
     }
 
     @Override
@@ -118,6 +132,24 @@ public class CounterStateMachine extends StateMachineAdapter {
                         final long prev = this.value.get();
                         current = this.value.addAndGet(delta);
                         LOG.info("Added value={} by delta={} at logIndex={}", prev, delta, iter.getIndex());
+                        break;
+                    case WRITE_BYTES:
+                        final byte[] byteValue = counterOperation.getBytes();
+                        for (int i = 0; i < byteValue.length; i++) {
+                            this.byteValue[i] = byteValue[i];
+                        }
+                        LOG.info("Set byte value={} length={} at logIndex={}", byteValue, byteValue.length,
+                            iter.getIndex());
+                        LOG.info("Get byte value={} length={} at logIndex={}", this.byteValue[0].toString(),
+                            this.byteValue.length, iter.getIndex());
+                        // log this.byteValue using for loop
+                        // for (int i = 0; i < this.byteValue.length; i++) {
+                        // LOG.info("Get byte value={} at logIndex={}", this.byteValue[i].toString(), iter.getIndex());
+                        // }
+                        break;
+                    case READ_BYTES:
+                        final Byte[] byteValue2 = this.byteValue;
+                        LOG.info("Get byte value={} at logIndex={}", byteValue2, iter.getIndex());
                         break;
                 }
 

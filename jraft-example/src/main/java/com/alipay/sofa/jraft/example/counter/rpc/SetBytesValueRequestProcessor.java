@@ -19,28 +19,28 @@ package com.alipay.sofa.jraft.example.counter.rpc;
 import com.alipay.sofa.jraft.Status;
 import com.alipay.sofa.jraft.example.counter.CounterClosure;
 import com.alipay.sofa.jraft.example.counter.CounterService;
+import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest;
 import com.alipay.sofa.jraft.rpc.RpcContext;
-import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetValueRequest;
 import com.alipay.sofa.jraft.rpc.RpcProcessor;
 
 /**
- * GetValueRequest processor.
+ * SetBytesValueRequest processor.
  *
  * @author boyan (boyan@alibaba-inc.com)
  *
- * 2018-Apr-09 5:48:33 PM
+ * 2018-Apr-09 5:43:57 PM
  */
-public class GetValueRequestProcessor implements RpcProcessor<GetValueRequest> {
+public class SetBytesValueRequestProcessor implements RpcProcessor<SetBytesRequest> {
 
     private final CounterService counterService;
 
-    public GetValueRequestProcessor(CounterService counterService) {
+    public SetBytesValueRequestProcessor(CounterService counterService) {
         super();
         this.counterService = counterService;
     }
 
     @Override
-    public void handleRequest(final RpcContext rpcCtx, final GetValueRequest request) {
+    public void handleRequest(final RpcContext rpcCtx, final SetBytesRequest request) {
         final CounterClosure closure = new CounterClosure() {
             @Override
             public void run(Status status) {
@@ -48,11 +48,11 @@ public class GetValueRequestProcessor implements RpcProcessor<GetValueRequest> {
             }
         };
 
-        this.counterService.get(request.getReadOnlySafe(0), closure);
+        this.counterService.setBytesValue(request.getValue().toByteArray(), closure);
     }
 
     @Override
     public String interest() {
-        return GetValueRequest.class.getName();
+        return SetBytesRequest.class.getName();
     }
 }
