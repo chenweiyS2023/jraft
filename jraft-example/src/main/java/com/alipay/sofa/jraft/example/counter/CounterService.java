@@ -36,7 +36,12 @@ public interface CounterService {
     void incrementAndGet(final long delta, final CounterClosure closure);
 
     /**
-     * SetBytesValue
+     * setBytesValue
      */
     void setBytesValue(final byte[] bytes, final CounterClosure closure);
+
+    /**
+     * getBytesValue
+     */
+    void getBytesValue(final CounterClosure closure);
 }

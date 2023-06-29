@@ -1135,9 +1135,9 @@ public final class CounterOutter {
 
     }
 
-    public interface SetBytesRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:jraft.SetBytesRequest)
-                                             com.google.protobuf.MessageOrBuilder {
+    public interface SetBytesValueRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:jraft.SetBytesValueRequest)
+                                                  com.google.protobuf.MessageOrBuilder {
 
         /**
          * <code>required bytes value = 1;</code>
@@ -1151,19 +1151,19 @@ public final class CounterOutter {
     }
 
     /**
-     * Protobuf type {@code jraft.SetBytesRequest}
+     * Protobuf type {@code jraft.SetBytesValueRequest}
      */
-    public static final class SetBytesRequest extends com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:jraft.SetBytesRequest)
-                                                                                            SetBytesRequestOrBuilder {
+    public static final class SetBytesValueRequest extends com.google.protobuf.GeneratedMessageV3 implements
+    // @@protoc_insertion_point(message_implements:jraft.SetBytesValueRequest)
+                                                                                                 SetBytesValueRequestOrBuilder {
         private static final long serialVersionUID = 0L;
 
-        // Use SetBytesRequest.newBuilder() to construct.
-        private SetBytesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        // Use SetBytesValueRequest.newBuilder() to construct.
+        private SetBytesValueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
             super(builder);
         }
 
-        private SetBytesRequest() {
+        private SetBytesValueRequest() {
             value_ = com.google.protobuf.ByteString.EMPTY;
         }
 
@@ -1172,9 +1172,9 @@ public final class CounterOutter {
             return this.unknownFields;
         }
 
-        private SetBytesRequest(com.google.protobuf.CodedInputStream input,
-                                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                            throws com.google.protobuf.InvalidProtocolBufferException {
+        private SetBytesValueRequest(com.google.protobuf.CodedInputStream input,
+                                     com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
             this();
             if (extensionRegistry == null) {
                 throw new java.lang.NullPointerException();
@@ -1214,15 +1214,15 @@ public final class CounterOutter {
         }
 
         public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesRequest_descriptor;
+            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesValueRequest_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
-            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesRequest_fieldAccessorTable
+            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesValueRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.class,
-                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.Builder.class);
+                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest.class,
+                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest.Builder.class);
         }
 
         private int                            bitField0_;
@@ -1289,10 +1289,10 @@ public final class CounterOutter {
             if (obj == this) {
                 return true;
             }
-            if (!(obj instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest)) {
+            if (!(obj instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest)) {
                 return super.equals(obj);
             }
-            com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest other = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest) obj;
+            com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest other = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest) obj;
 
             boolean result = true;
             result = result && (hasValue() == other.hasValue());
@@ -1319,70 +1319,70 @@ public final class CounterOutter {
             return hash;
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(java.nio.ByteBuffer data)
-                                                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(java.nio.ByteBuffer data)
+                                                                                                                                      throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(java.nio.ByteBuffer data,
-                                                                                                        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                    throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(java.nio.ByteBuffer data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(com.google.protobuf.ByteString data)
-                                                                                                                                            throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(com.google.protobuf.ByteString data)
+                                                                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(com.google.protobuf.ByteString data,
-                                                                                                        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                    throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(com.google.protobuf.ByteString data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(byte[] data)
-                                                                                                                    throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(byte[] data)
+                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(byte[] data,
-                                                                                                        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                    throws com.google.protobuf.InvalidProtocolBufferException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(byte[] data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(java.io.InputStream input)
-                                                                                                                                  throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(java.io.InputStream input)
+                                                                                                                                       throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(java.io.InputStream input,
-                                                                                                        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                    throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(java.io.InputStream input,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseDelimitedFrom(java.io.InputStream input)
-                                                                                                                                           throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseDelimitedFrom(java.io.InputStream input)
+                                                                                                                                                throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseDelimitedFrom(java.io.InputStream input,
-                                                                                                                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                             throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseDelimitedFrom(java.io.InputStream input,
+                                                                                                                      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                                  throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
                 extensionRegistry);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(com.google.protobuf.CodedInputStream input)
-                                                                                                                                                   throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(com.google.protobuf.CodedInputStream input)
+                                                                                                                                                        throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parseFrom(com.google.protobuf.CodedInputStream input,
-                                                                                                        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                    throws java.io.IOException {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parseFrom(com.google.protobuf.CodedInputStream input,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws java.io.IOException {
             return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
         }
 
@@ -1395,7 +1395,7 @@ public final class CounterOutter {
             return DEFAULT_INSTANCE.toBuilder();
         }
 
-        public static Builder newBuilder(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest prototype) {
+        public static Builder newBuilder(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest prototype) {
             return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
 
@@ -1411,25 +1411,25 @@ public final class CounterOutter {
         }
 
         /**
-         * Protobuf type {@code jraft.SetBytesRequest}
+         * Protobuf type {@code jraft.SetBytesValueRequest}
          */
         public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
                                                                                                          implements
-                                                                                                         // @@protoc_insertion_point(builder_implements:jraft.SetBytesRequest)
-                                                                                                         com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequestOrBuilder {
+                                                                                                         // @@protoc_insertion_point(builder_implements:jraft.SetBytesValueRequest)
+                                                                                                         com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequestOrBuilder {
             public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesRequest_descriptor;
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesValueRequest_descriptor;
             }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
-                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesRequest_fieldAccessorTable
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesValueRequest_fieldAccessorTable
                     .ensureFieldAccessorsInitialized(
-                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.class,
-                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.Builder.class);
+                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest.class,
+                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest.Builder.class);
             }
 
-            // Construct using com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.newBuilder()
+            // Construct using com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest.newBuilder()
             private Builder() {
                 maybeForceBuilderInitialization();
             }
@@ -1454,17 +1454,18 @@ public final class CounterOutter {
 
             @java.lang.Override
             public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesRequest_descriptor;
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_SetBytesValueRequest_descriptor;
             }
 
             @java.lang.Override
-            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest getDefaultInstanceForType() {
-                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest.getDefaultInstance();
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest getDefaultInstanceForType() {
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest
+                    .getDefaultInstance();
             }
 
             @java.lang.Override
-            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest build() {
-                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest result = buildPartial();
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest build() {
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest result = buildPartial();
                 if (!result.isInitialized()) {
                     throw newUninitializedMessageException(result);
                 }
@@ -1472,8 +1473,8 @@ public final class CounterOutter {
             }
 
             @java.lang.Override
-            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest buildPartial() {
-                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest result = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest(
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest buildPartial() {
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest result = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest(
                     this);
                 int from_bitField0_ = bitField0_;
                 int to_bitField0_ = 0;
@@ -1520,16 +1521,16 @@ public final class CounterOutter {
 
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
-                if (other instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest) {
-                    return mergeFrom((com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest) other);
+                if (other instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest) {
+                    return mergeFrom((com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest) other);
                 } else {
                     super.mergeFrom(other);
                     return this;
                 }
             }
 
-            public Builder mergeFrom(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest other) {
-                if (other == com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest
+            public Builder mergeFrom(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest other) {
+                if (other == com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest
                     .getDefaultInstance())
                     return this;
                 if (other.hasValue()) {
@@ -1552,11 +1553,11 @@ public final class CounterOutter {
             public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
                                      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                                                                                                  throws java.io.IOException {
-                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest parsedMessage = null;
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest parsedMessage = null;
                 try {
                     parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
                 } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                    parsedMessage = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest) e
+                    parsedMessage = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest) e
                         .getUnfinishedMessage();
                     throw e.unwrapIOException();
                 } finally {
@@ -1618,41 +1619,627 @@ public final class CounterOutter {
                 return super.mergeUnknownFields(unknownFields);
             }
 
-            // @@protoc_insertion_point(builder_scope:jraft.SetBytesRequest)
+            // @@protoc_insertion_point(builder_scope:jraft.SetBytesValueRequest)
         }
 
-        // @@protoc_insertion_point(class_scope:jraft.SetBytesRequest)
-        private static final com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:jraft.SetBytesValueRequest)
+        private static final com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest DEFAULT_INSTANCE;
         static {
-            DEFAULT_INSTANCE = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest();
+            DEFAULT_INSTANCE = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest();
         }
 
-        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest getDefaultInstance() {
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest getDefaultInstance() {
             return DEFAULT_INSTANCE;
         }
 
         @java.lang.Deprecated
-        public static final com.google.protobuf.Parser<SetBytesRequest> PARSER = new com.google.protobuf.AbstractParser<SetBytesRequest>() {
-                                                                                   @java.lang.Override
-                                                                                   public SetBytesRequest parsePartialFrom(com.google.protobuf.CodedInputStream input,
-                                                                                                                           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                                                                                                                                                                                       throws com.google.protobuf.InvalidProtocolBufferException {
-                                                                                       return new SetBytesRequest(
-                                                                                           input, extensionRegistry);
-                                                                                   }
-                                                                               };
+        public static final com.google.protobuf.Parser<SetBytesValueRequest> PARSER = new com.google.protobuf.AbstractParser<SetBytesValueRequest>() {
+                                                                                        @java.lang.Override
+                                                                                        public SetBytesValueRequest parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                                                                                                                                     com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
+                                                                                            return new SetBytesValueRequest(
+                                                                                                input,
+                                                                                                extensionRegistry);
+                                                                                        }
+                                                                                    };
 
-        public static com.google.protobuf.Parser<SetBytesRequest> parser() {
+        public static com.google.protobuf.Parser<SetBytesValueRequest> parser() {
             return PARSER;
         }
 
         @java.lang.Override
-        public com.google.protobuf.Parser<SetBytesRequest> getParserForType() {
+        public com.google.protobuf.Parser<SetBytesValueRequest> getParserForType() {
             return PARSER;
         }
 
         @java.lang.Override
-        public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest getDefaultInstanceForType() {
+        public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+    }
+
+    public interface GetBytesValueRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:jraft.GetBytesValueRequest)
+                                                  com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        java.util.List<java.lang.Boolean> getReadOnlySafeList();
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        int getReadOnlySafeCount();
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        boolean getReadOnlySafe(int index);
+    }
+
+    /**
+     * Protobuf type {@code jraft.GetBytesValueRequest}
+     */
+    public static final class GetBytesValueRequest extends com.google.protobuf.GeneratedMessageV3 implements
+    // @@protoc_insertion_point(message_implements:jraft.GetBytesValueRequest)
+                                                                                                 GetBytesValueRequestOrBuilder {
+        private static final long serialVersionUID = 0L;
+
+        // Use GetBytesValueRequest.newBuilder() to construct.
+        private GetBytesValueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private GetBytesValueRequest() {
+            readOnlySafe_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        private GetBytesValueRequest(com.google.protobuf.CodedInputStream input,
+                                     com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+                            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                                readOnlySafe_ = new java.util.ArrayList<java.lang.Boolean>();
+                                mutable_bitField0_ |= 0x00000001;
+                            }
+                            readOnlySafe_.add(input.readBool());
+                            break;
+                        }
+                        case 10: {
+                            int length = input.readRawVarint32();
+                            int limit = input.pushLimit(length);
+                            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                                readOnlySafe_ = new java.util.ArrayList<java.lang.Boolean>();
+                                mutable_bitField0_ |= 0x00000001;
+                            }
+                            while (input.getBytesUntilLimit() > 0) {
+                                readOnlySafe_.add(input.readBool());
+                            }
+                            input.popLimit(limit);
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                    readOnlySafe_ = java.util.Collections.unmodifiableList(readOnlySafe_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_GetBytesValueRequest_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_GetBytesValueRequest_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest.class,
+                    com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest.Builder.class);
+        }
+
+        public static final int                   READONLYSAFE_FIELD_NUMBER = 1;
+        private java.util.List<java.lang.Boolean> readOnlySafe_;
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        public java.util.List<java.lang.Boolean> getReadOnlySafeList() {
+            return readOnlySafe_;
+        }
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        public int getReadOnlySafeCount() {
+            return readOnlySafe_.size();
+        }
+
+        /**
+         * <code>repeated bool readOnlySafe = 1;</code>
+         */
+        public boolean getReadOnlySafe(int index) {
+            return readOnlySafe_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            for (int i = 0; i < readOnlySafe_.size(); i++) {
+                output.writeBool(1, readOnlySafe_.get(i));
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            {
+                int dataSize = 0;
+                dataSize = 1 * getReadOnlySafeList().size();
+                size += dataSize;
+                size += 1 * getReadOnlySafeList().size();
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest)) {
+                return super.equals(obj);
+            }
+            com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest other = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest) obj;
+
+            boolean result = true;
+            result = result && getReadOnlySafeList().equals(other.getReadOnlySafeList());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getReadOnlySafeCount() > 0) {
+                hash = (37 * hash) + READONLYSAFE_FIELD_NUMBER;
+                hash = (53 * hash) + getReadOnlySafeList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(java.nio.ByteBuffer data)
+                                                                                                                                      throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(java.nio.ByteBuffer data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(com.google.protobuf.ByteString data)
+                                                                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(com.google.protobuf.ByteString data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(byte[] data)
+                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(byte[] data,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(java.io.InputStream input)
+                                                                                                                                       throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(java.io.InputStream input,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseDelimitedFrom(java.io.InputStream input)
+                                                                                                                                                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseDelimitedFrom(java.io.InputStream input,
+                                                                                                                      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                                  throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                extensionRegistry);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(com.google.protobuf.CodedInputStream input)
+                                                                                                                                                        throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parseFrom(com.google.protobuf.CodedInputStream input,
+                                                                                                             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                         throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code jraft.GetBytesValueRequest}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+                                                                                                         implements
+                                                                                                         // @@protoc_insertion_point(builder_implements:jraft.GetBytesValueRequest)
+                                                                                                         com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequestOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_GetBytesValueRequest_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_GetBytesValueRequest_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest.class,
+                        com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest.Builder.class);
+            }
+
+            // Construct using com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                readOnlySafe_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.internal_static_jraft_GetBytesValueRequest_descriptor;
+            }
+
+            @java.lang.Override
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest getDefaultInstanceForType() {
+                return com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest
+                    .getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest build() {
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest buildPartial() {
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest result = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest(
+                    this);
+                int from_bitField0_ = bitField0_;
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                    readOnlySafe_ = java.util.Collections.unmodifiableList(readOnlySafe_);
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                }
+                result.readOnlySafe_ = readOnlySafe_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                                            java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                                            java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest) {
+                    return mergeFrom((com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest other) {
+                if (other == com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest
+                    .getDefaultInstance())
+                    return this;
+                if (!other.readOnlySafe_.isEmpty()) {
+                    if (readOnlySafe_.isEmpty()) {
+                        readOnlySafe_ = other.readOnlySafe_;
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    } else {
+                        ensureReadOnlySafeIsMutable();
+                        readOnlySafe_.addAll(other.readOnlySafe_);
+                    }
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                                     com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                 throws java.io.IOException {
+                com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest) e
+                        .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int                               bitField0_;
+
+            private java.util.List<java.lang.Boolean> readOnlySafe_ = java.util.Collections.emptyList();
+
+            private void ensureReadOnlySafeIsMutable() {
+                if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+                    readOnlySafe_ = new java.util.ArrayList<java.lang.Boolean>(readOnlySafe_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public java.util.List<java.lang.Boolean> getReadOnlySafeList() {
+                return java.util.Collections.unmodifiableList(readOnlySafe_);
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public int getReadOnlySafeCount() {
+                return readOnlySafe_.size();
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public boolean getReadOnlySafe(int index) {
+                return readOnlySafe_.get(index);
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public Builder setReadOnlySafe(int index, boolean value) {
+                ensureReadOnlySafeIsMutable();
+                readOnlySafe_.set(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public Builder addReadOnlySafe(boolean value) {
+                ensureReadOnlySafeIsMutable();
+                readOnlySafe_.add(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public Builder addAllReadOnlySafe(java.lang.Iterable<? extends java.lang.Boolean> values) {
+                ensureReadOnlySafeIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(values, readOnlySafe_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated bool readOnlySafe = 1;</code>
+             */
+            public Builder clearReadOnlySafe() {
+                readOnlySafe_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:jraft.GetBytesValueRequest)
+        }
+
+        // @@protoc_insertion_point(class_scope:jraft.GetBytesValueRequest)
+        private static final com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest();
+        }
+
+        public static com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated
+        public static final com.google.protobuf.Parser<GetBytesValueRequest> PARSER = new com.google.protobuf.AbstractParser<GetBytesValueRequest>() {
+                                                                                        @java.lang.Override
+                                                                                        public GetBytesValueRequest parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                                                                                                                                     com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                                                                                                                                                                                                 throws com.google.protobuf.InvalidProtocolBufferException {
+                                                                                            return new GetBytesValueRequest(
+                                                                                                input,
+                                                                                                extensionRegistry);
+                                                                                        }
+                                                                                    };
+
+        public static com.google.protobuf.Parser<GetBytesValueRequest> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<GetBytesValueRequest> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest getDefaultInstanceForType() {
             return DEFAULT_INSTANCE;
         }
 
@@ -1711,6 +2298,16 @@ public final class CounterOutter {
          * <code>optional string errorMsg = 4;</code>
          */
         com.google.protobuf.ByteString getErrorMsgBytes();
+
+        /**
+         * <code>optional bytes bytesValue = 5;</code>
+         */
+        boolean hasBytesValue();
+
+        /**
+         * <code>optional bytes bytesValue = 5;</code>
+         */
+        com.google.protobuf.ByteString getBytesValue();
     }
 
     /**
@@ -1731,6 +2328,7 @@ public final class CounterOutter {
             success_ = false;
             redirect_ = "";
             errorMsg_ = "";
+            bytesValue_ = com.google.protobuf.ByteString.EMPTY;
         }
 
         @java.lang.Override
@@ -1776,6 +2374,11 @@ public final class CounterOutter {
                             com.google.protobuf.ByteString bs = input.readBytes();
                             bitField0_ |= 0x00000008;
                             errorMsg_ = bs;
+                            break;
+                        }
+                        case 42: {
+                            bitField0_ |= 0x00000010;
+                            bytesValue_ = input.readBytes();
                             break;
                         }
                         default: {
@@ -1925,6 +2528,23 @@ public final class CounterOutter {
             }
         }
 
+        public static final int                BYTESVALUE_FIELD_NUMBER = 5;
+        private com.google.protobuf.ByteString bytesValue_;
+
+        /**
+         * <code>optional bytes bytesValue = 5;</code>
+         */
+        public boolean hasBytesValue() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+
+        /**
+         * <code>optional bytes bytesValue = 5;</code>
+         */
+        public com.google.protobuf.ByteString getBytesValue() {
+            return bytesValue_;
+        }
+
         private byte memoizedIsInitialized = -1;
 
         @java.lang.Override
@@ -1961,6 +2581,9 @@ public final class CounterOutter {
             if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errorMsg_);
             }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                output.writeBytes(5, bytesValue_);
+            }
             unknownFields.writeTo(output);
         }
 
@@ -1982,6 +2605,9 @@ public final class CounterOutter {
             }
             if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errorMsg_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(5, bytesValue_);
             }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
@@ -2015,6 +2641,10 @@ public final class CounterOutter {
             if (hasErrorMsg()) {
                 result = result && getErrorMsg().equals(other.getErrorMsg());
             }
+            result = result && (hasBytesValue() == other.hasBytesValue());
+            if (hasBytesValue()) {
+                result = result && getBytesValue().equals(other.getBytesValue());
+            }
             result = result && unknownFields.equals(other.unknownFields);
             return result;
         }
@@ -2041,6 +2671,10 @@ public final class CounterOutter {
             if (hasErrorMsg()) {
                 hash = (37 * hash) + ERRORMSG_FIELD_NUMBER;
                 hash = (53 * hash) + getErrorMsg().hashCode();
+            }
+            if (hasBytesValue()) {
+                hash = (37 * hash) + BYTESVALUE_FIELD_NUMBER;
+                hash = (53 * hash) + getBytesValue().hashCode();
             }
             hash = (29 * hash) + unknownFields.hashCode();
             memoizedHashCode = hash;
@@ -2183,6 +2817,8 @@ public final class CounterOutter {
                 bitField0_ = (bitField0_ & ~0x00000004);
                 errorMsg_ = "";
                 bitField0_ = (bitField0_ & ~0x00000008);
+                bytesValue_ = com.google.protobuf.ByteString.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000010);
                 return this;
             }
 
@@ -2227,6 +2863,10 @@ public final class CounterOutter {
                     to_bitField0_ |= 0x00000008;
                 }
                 result.errorMsg_ = errorMsg_;
+                if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                    to_bitField0_ |= 0x00000010;
+                }
+                result.bytesValue_ = bytesValue_;
                 result.bitField0_ = to_bitField0_;
                 onBuilt();
                 return result;
@@ -2292,6 +2932,9 @@ public final class CounterOutter {
                     bitField0_ |= 0x00000008;
                     errorMsg_ = other.errorMsg_;
                     onChanged();
+                }
+                if (other.hasBytesValue()) {
+                    setBytesValue(other.getBytesValue());
                 }
                 this.mergeUnknownFields(other.unknownFields);
                 onChanged();
@@ -2556,6 +3199,45 @@ public final class CounterOutter {
                 return this;
             }
 
+            private com.google.protobuf.ByteString bytesValue_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>optional bytes bytesValue = 5;</code>
+             */
+            public boolean hasBytesValue() {
+                return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+
+            /**
+             * <code>optional bytes bytesValue = 5;</code>
+             */
+            public com.google.protobuf.ByteString getBytesValue() {
+                return bytesValue_;
+            }
+
+            /**
+             * <code>optional bytes bytesValue = 5;</code>
+             */
+            public Builder setBytesValue(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000010;
+                bytesValue_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional bytes bytesValue = 5;</code>
+             */
+            public Builder clearBytesValue() {
+                bitField0_ = (bitField0_ & ~0x00000010);
+                bytesValue_ = getDefaultInstance().getBytesValue();
+                onChanged();
+                return this;
+            }
+
             @java.lang.Override
             public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
                 return super.setUnknownFields(unknownFields);
@@ -2610,8 +3292,10 @@ public final class CounterOutter {
     private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_GetValueRequest_fieldAccessorTable;
     private static final com.google.protobuf.Descriptors.Descriptor                internal_static_jraft_IncrementAndGetRequest_descriptor;
     private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_IncrementAndGetRequest_fieldAccessorTable;
-    private static final com.google.protobuf.Descriptors.Descriptor                internal_static_jraft_SetBytesRequest_descriptor;
-    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_SetBytesRequest_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor                internal_static_jraft_SetBytesValueRequest_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_SetBytesValueRequest_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor                internal_static_jraft_GetBytesValueRequest_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_GetBytesValueRequest_fieldAccessorTable;
     private static final com.google.protobuf.Descriptors.Descriptor                internal_static_jraft_ValueResponse_descriptor;
     private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_jraft_ValueResponse_fieldAccessorTable;
 
@@ -2624,11 +3308,13 @@ public final class CounterOutter {
         java.lang.String[] descriptorData = { "\n.jraft-example/src/main/resources/count"
                                               + "er.proto\022\005jraft\"\'\n\017GetValueRequest\022\024\n\014re"
                                               + "adOnlySafe\030\001 \003(\010\"\'\n\026IncrementAndGetReque"
-                                              + "st\022\r\n\005delta\030\001 \002(\003\" \n\017SetBytesRequest\022\r\n\005"
-                                              + "value\030\001 \002(\014\"S\n\rValueResponse\022\r\n\005value\030\001 "
-                                              + "\002(\003\022\017\n\007success\030\002 \002(\010\022\020\n\010redirect\030\003 \001(\t\022\020"
-                                              + "\n\010errorMsg\030\004 \001(\tB:\n)com.alipay.sofa.jraf"
-                                              + "t.example.counter.rpcB\rCounterOutter" };
+                                              + "st\022\r\n\005delta\030\001 \002(\003\"%\n\024SetBytesValueReques"
+                                              + "t\022\r\n\005value\030\001 \002(\014\",\n\024GetBytesValueRequest"
+                                              + "\022\024\n\014readOnlySafe\030\001 \003(\010\"g\n\rValueResponse\022"
+                                              + "\r\n\005value\030\001 \002(\003\022\017\n\007success\030\002 \002(\010\022\020\n\010redir"
+                                              + "ect\030\003 \001(\t\022\020\n\010errorMsg\030\004 \001(\t\022\022\n\nbytesValu"
+                                              + "e\030\005 \001(\014B:\n)com.alipay.sofa.jraft.example"
+                                              + ".counter.rpcB\rCounterOutter" };
         com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
             public com.google.protobuf.ExtensionRegistry assignDescriptors(com.google.protobuf.Descriptors.FileDescriptor root) {
                 descriptor = root;
@@ -2643,13 +3329,16 @@ public final class CounterOutter {
         internal_static_jraft_IncrementAndGetRequest_descriptor = getDescriptor().getMessageTypes().get(1);
         internal_static_jraft_IncrementAndGetRequest_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_jraft_IncrementAndGetRequest_descriptor, new java.lang.String[] { "Delta", });
-        internal_static_jraft_SetBytesRequest_descriptor = getDescriptor().getMessageTypes().get(2);
-        internal_static_jraft_SetBytesRequest_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_jraft_SetBytesRequest_descriptor, new java.lang.String[] { "Value", });
-        internal_static_jraft_ValueResponse_descriptor = getDescriptor().getMessageTypes().get(3);
+        internal_static_jraft_SetBytesValueRequest_descriptor = getDescriptor().getMessageTypes().get(2);
+        internal_static_jraft_SetBytesValueRequest_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_jraft_SetBytesValueRequest_descriptor, new java.lang.String[] { "Value", });
+        internal_static_jraft_GetBytesValueRequest_descriptor = getDescriptor().getMessageTypes().get(3);
+        internal_static_jraft_GetBytesValueRequest_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_jraft_GetBytesValueRequest_descriptor, new java.lang.String[] { "ReadOnlySafe", });
+        internal_static_jraft_ValueResponse_descriptor = getDescriptor().getMessageTypes().get(4);
         internal_static_jraft_ValueResponse_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_jraft_ValueResponse_descriptor, new java.lang.String[] { "Value", "Success", "Redirect",
-            "ErrorMsg", });
+            "ErrorMsg", "BytesValue", });
     }
 
     // @@protoc_insertion_point(outer_class_scope)

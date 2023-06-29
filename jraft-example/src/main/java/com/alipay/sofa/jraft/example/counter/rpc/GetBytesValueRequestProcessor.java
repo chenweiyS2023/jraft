@@ -19,40 +19,45 @@ package com.alipay.sofa.jraft.example.counter.rpc;
 import com.alipay.sofa.jraft.Status;
 import com.alipay.sofa.jraft.example.counter.CounterClosure;
 import com.alipay.sofa.jraft.example.counter.CounterService;
-import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest;
 import com.alipay.sofa.jraft.rpc.RpcContext;
+import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest;
 import com.alipay.sofa.jraft.rpc.RpcProcessor;
 
 /**
- * SetBytesValueRequest processor.
+ * GetBytesValueRequest processor.
  *
  * @author boyan (boyan@alibaba-inc.com)
  *
- *         2018-Apr-09 5:43:57 PM
+ *         2018-Apr-09 5:48:33 PM
  */
-public class SetBytesValueRequestProcessor implements RpcProcessor<SetBytesValueRequest> {
+public class GetBytesValueRequestProcessor implements RpcProcessor<GetBytesValueRequest> {
 
     private final CounterService counterService;
 
-    public SetBytesValueRequestProcessor(CounterService counterService) {
+    public GetBytesValueRequestProcessor(CounterService counterService) {
         super();
         this.counterService = counterService;
     }
 
     @Override
-    public void handleRequest(final RpcContext rpcCtx, final SetBytesValueRequest request) {
+    public void handleRequest(final RpcContext rpcCtx, final GetBytesValueRequest request) {
+        // log to see if the request is handled in the same thread
+        System.out.println("GetBytesValueRequestProcessor thread: " + Thread.currentThread().getName());
+
         final CounterClosure closure = new CounterClosure() {
             @Override
             public void run(Status status) {
                 rpcCtx.sendResponse(getValueResponse());
             }
         };
+        // log to see if the request is handled in the same thread
+        System.out.println("GetBytesValueRequestProcessor thread2: " + Thread.currentThread().getName());
 
-        this.counterService.setBytesValue(request.getValue().toByteArray(), closure);
+        this.counterService.getBytesValue(closure);
     }
 
     @Override
     public String interest() {
-        return SetBytesValueRequest.class.getName();
+        return GetBytesValueRequest.class.getName();
     }
 }

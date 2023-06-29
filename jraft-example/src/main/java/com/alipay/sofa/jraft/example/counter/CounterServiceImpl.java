@@ -32,6 +32,8 @@ import com.alipay.sofa.jraft.error.RaftError;
 import com.alipay.sofa.jraft.rhea.StoreEngineHelper;
 import com.alipay.sofa.jraft.rhea.options.StoreEngineOptions;
 import com.alipay.sofa.jraft.util.BytesUtil;
+// import ArrayUtil
+import java.util.Arrays;
 
 /**
  * @author likun (saimu.msm@antfin.com)
@@ -54,7 +56,7 @@ public class CounterServiceImpl implements CounterService {
 
     @Override
     public void get(final boolean readOnlySafe, final CounterClosure closure) {
-        if(!readOnlySafe){
+        if (!readOnlySafe) {
             closure.success(getValue());
             closure.run(Status.OK());
             return;
@@ -63,16 +65,17 @@ public class CounterServiceImpl implements CounterService {
         this.counterServer.getNode().readIndex(BytesUtil.EMPTY_BYTES, new ReadIndexClosure() {
             @Override
             public void run(Status status, long index, byte[] reqCtx) {
-                if(status.isOk()){
+                if (status.isOk()) {
                     closure.success(getValue());
                     closure.run(Status.OK());
                     return;
                 }
                 CounterServiceImpl.this.readIndexExecutor.execute(() -> {
-                    if(isLeader()){
-                        LOG.debug("Fail to get value with 'ReadIndex': {}, try to applying to the state machine.", status);
+                    if (isLeader()) {
+                        LOG.debug("Fail to get value with 'ReadIndex': {}, try to applying to the state machine.",
+                                status);
                         applyOperation(CounterOperation.createGet(), closure);
-                    }else {
+                    } else {
                         handlerNotLeaderError(closure);
                     }
                 });
@@ -100,6 +103,34 @@ public class CounterServiceImpl implements CounterService {
     @Override
     public void setBytesValue(final byte[] value, final CounterClosure closure) {
         applyOperation(CounterOperation.createSetBytesValue(value), closure);
+    }
+
+    @Override
+    public void getBytesValue(final CounterClosure closure) {
+        System.out.println("getBytesValue entered");
+        Byte[] byteArray = this.counterServer.getFsm().getBytesValue();
+        // print byteArray content
+        System.out.println("byteArray value");
+        for (int i = 0; i < byteArray.length; i++) {
+            System.out.println(byteArray[i]);
+        }
+        byte[] byteObjects = new byte[byteArray.length];
+        int j = 0;
+        for (Byte b : byteArray) {
+            // skip type cast if byte is null
+            if (b != null)
+                byteObjects[j] = b.byteValue();
+            j++;
+        }
+
+        System.out.println("byteObjects assigned value");
+        for (int i = 0; i < byteObjects.length; i++) {
+            System.out.println(byteObjects[i]);
+        }
+        LOG.info("Get byte value={} length={} at logIndex={}", byteArray, byteArray.length);
+        closure.successWithBytes(byteObjects);
+        closure.run(Status.OK());
+        return;
     }
 
     private void applyOperation(final CounterOperation op, final CounterClosure closure) {

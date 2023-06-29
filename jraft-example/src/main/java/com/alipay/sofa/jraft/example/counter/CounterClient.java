@@ -21,7 +21,8 @@ import com.alipay.sofa.jraft.conf.Configuration;
 import com.alipay.sofa.jraft.entity.PeerId;
 import com.alipay.sofa.jraft.error.RemotingException;
 import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.IncrementAndGetRequest;
-import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesRequest;
+import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.SetBytesValueRequest;
+import com.alipay.sofa.jraft.example.counter.rpc.CounterOutter.GetBytesValueRequest;
 import com.alipay.sofa.jraft.example.counter.rpc.CounterGrpcHelper;
 import com.alipay.sofa.jraft.option.CliOptions;
 import com.alipay.sofa.jraft.rpc.InvokeCallback;
@@ -63,10 +64,20 @@ public class CounterClient {
         final CountDownLatch latch = new CountDownLatch(n);
         final long start = System.currentTimeMillis();
         // for (int i = 0; i < n; i++) {
-        //     incrementAndGet(cliClientService, leader, i, latch);
+        // incrementAndGet(cliClientService, leader, i, latch);
         // }
         setBytesValue(cliClientService, leader, "hello".getBytes(), latch);
-        latch.await();
+        // latch.await();
+        System.out.println(n + " ops, cost : " + (System.currentTimeMillis() - start) + " mssssssss.");
+
+        // sleep for 5s to wait for the data to be replicated to the follower
+        Thread.sleep(5000);
+
+        // get the ip addresses of the cluster
+        getBytesValue(cliClientService);
+
+        // Thread.sleep(15000);
+        // latch.await();
         System.out.println(n + " ops, cost : " + (System.currentTimeMillis() - start) + " mssssssss.");
         System.exit(0);
     }
@@ -98,8 +109,8 @@ public class CounterClient {
     private static void setBytesValue(final CliClientServiceImpl cliClientService, final PeerId leader,
                                       final byte[] bytes, CountDownLatch latch) throws RemotingException,
                                                                                InterruptedException {
-        SetBytesRequest request = SetBytesRequest.newBuilder().setValue(com.google.protobuf.ByteString.copyFrom(bytes))
-            .build();
+        SetBytesValueRequest request = SetBytesValueRequest.newBuilder()
+            .setValue(com.google.protobuf.ByteString.copyFrom(bytes)).build();
         cliClientService.getRpcClient().invokeAsync(leader.getEndpoint(), request, new InvokeCallback() {
 
             @Override
@@ -118,6 +129,63 @@ public class CounterClient {
                 return null;
             }
         }, 5000);
+    }
+
+    private static void getBytesValue(final CliClientServiceImpl cliClientService) throws RemotingException,
+                                                                                  InterruptedException {
+        GetBytesValueRequest request = GetBytesValueRequest.newBuilder().build();
+
+        // send the request to all the peers in the cluster
+
+        // get the ip addresses of the cluster
+        final Configuration conf = RouteTable.getInstance().getConfiguration("counter");
+        for (PeerId peer : conf) {
+            System.out.println("peer:" + peer.getEndpoint());
+            // cliClientService.getRpcClient().invokeAsync(peer.getEndpoint(), request, new
+            // InvokeCallback() {
+
+            // @Override
+            // public void complete(Object result, Throwable err) {
+            // if (err == null) {
+            // System.out.println("getBytesValue result:" + result);
+            // } else {
+            // err.printStackTrace();
+            // }
+            // }
+
+            // @Override
+            // public Executor executor() {
+            // return null;
+            // }
+            // }, 15000);
+
+            // invokeSync and print the result
+            Object result = cliClientService.getRpcClient().invokeSync(peer.getEndpoint(), request, 15000);
+
+            System.out.println("getBytesValue result:" + result.toString());
+
+            // cliClientService.getRpcClient().invokeSync(peer.getEndpoint(), request,
+            // 15000);
+        }
+        // cliClientService.getRpcClient().invokeAsync(leader.getEndpoint(), request,
+        // new InvokeCallback() {
+
+        // @Override
+        // public void complete(Object result, Throwable err) {
+        // if (err == null) {
+        // latch.countDown();
+        // System.out.println("getBytesValue result:" + result);
+        // } else {
+        // err.printStackTrace();
+        // latch.countDown();
+        // }
+        // }
+
+        // @Override
+        // public Executor executor() {
+        // return null;
+        // }
+        // }, 5000);
     }
 
 }

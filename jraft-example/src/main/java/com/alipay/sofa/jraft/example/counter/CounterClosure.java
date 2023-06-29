@@ -53,4 +53,10 @@ public abstract class CounterClosure implements Closure {
         final ValueResponse response = ValueResponse.newBuilder().setValue(value).setSuccess(true).build();
         setValueResponse(response);
     }
+
+    protected void successWithBytes(final byte[] bytes) {
+        final ValueResponse response = ValueResponse.newBuilder()
+            .setBytesValue(com.google.protobuf.ByteString.copyFrom(bytes)).setSuccess(true).setValue(1).build();
+        setValueResponse(response);
+    }
 }

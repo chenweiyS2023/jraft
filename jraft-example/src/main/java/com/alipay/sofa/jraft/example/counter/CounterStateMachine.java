@@ -43,13 +43,15 @@ import com.alipay.sofa.jraft.error.RaftException;
 import com.alipay.sofa.jraft.example.counter.snapshot.CounterSnapshotFile;
 import com.alipay.sofa.jraft.storage.snapshot.SnapshotReader;
 import com.alipay.sofa.jraft.storage.snapshot.SnapshotWriter;
+// import Random
+import java.util.Random;
 
 /**
  * Counter state machine.
  *
  * @author boyan (boyan@alibaba-inc.com)
  *
- * 2018-Apr-09 4:52:31 PM
+ *         2018-Apr-09 4:52:31 PM
  */
 public class CounterStateMachine extends StateMachineAdapter {
 
@@ -68,7 +70,7 @@ public class CounterStateMachine extends StateMachineAdapter {
      * Counter value
      */
     private final AtomicLong          value      = new AtomicLong(0);
-    /** 
+    /**
      * Byte Array Value
      */
     private final Byte[]              byteValue  = new Byte[100];
@@ -91,7 +93,7 @@ public class CounterStateMachine extends StateMachineAdapter {
     /**
      * Returns byte value.
      */
-    public Byte[] getByteValue() {
+    public Byte[] getBytesValue() {
         return this.byteValue;
     }
 
@@ -103,7 +105,8 @@ public class CounterStateMachine extends StateMachineAdapter {
 
             CounterClosure closure = null;
             if (iter.done() != null) {
-                // This task is applied by this node, get value from closure to avoid additional parsing.
+                // This task is applied by this node, get value from closure to avoid additional
+                // parsing.
                 closure = (CounterClosure) iter.done();
                 counterOperation = closure.getCounterOperation();
             } else {
@@ -138,13 +141,19 @@ public class CounterStateMachine extends StateMachineAdapter {
                         for (int i = 0; i < byteValue.length; i++) {
                             this.byteValue[i] = byteValue[i];
                         }
+                        // add random byte to byteValue
+                        Random rand = new Random();
+                        byte randomByte = (byte) rand.nextInt(256); // random byte between 0 and 255
+                        this.byteValue[byteValue.length] = randomByte;
+
                         LOG.info("Set byte value={} length={} at logIndex={}", byteValue, byteValue.length,
                             iter.getIndex());
-                        LOG.info("Get byte value={} length={} at logIndex={}", this.byteValue[0].toString(),
-                            this.byteValue.length, iter.getIndex());
+                        LOG.info("Set byte value={} length={} at logIndex={}", this.byteValue, this.byteValue.length,
+                            iter.getIndex());
                         // log this.byteValue using for loop
                         // for (int i = 0; i < this.byteValue.length; i++) {
-                        // LOG.info("Get byte value={} at logIndex={}", this.byteValue[i].toString(), iter.getIndex());
+                        // LOG.info("Get byte value={} at logIndex={}", this.byteValue[i].toString(),
+                        // iter.getIndex());
                         // }
                         break;
                     case READ_BYTES:

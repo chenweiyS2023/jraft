@@ -14,8 +14,12 @@ message IncrementAndGetRequest {
   required int64 delta = 1;
 }
 
-message SetBytesRequest {
+message SetBytesValueRequest {
   required bytes value = 1;
+}
+
+message GetBytesValueRequest {
+  repeated bool readOnlySafe = 1;
 }
 
 message ValueResponse {
@@ -24,6 +28,7 @@ message ValueResponse {
   required bool success = 2;
   optional string redirect = 3;
   optional string errorMsg = 4;
+  optional bytes bytesValue = 5;
 }
 
 
